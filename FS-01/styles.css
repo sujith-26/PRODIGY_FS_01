@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.background-card {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Set text color to white for visibility */
+}
+
+.login-container {
+    background: linear-gradient(135deg, #1ca5f9, #f7c04a); /* Linear gradient background */
+    background-size: cover; /* Cover the full screen */
+    background-position: center;
+    padding: 40px; /* Increased padding for a bigger card */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 500px; /* Increase max-width for bigger card */
+    width: 90%;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 150px;
+}
+
+.login-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #f7c04a; /* Gold color for title */
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    color: #1ca5f9; /* Light blue color for buttons */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.toggle-btn.active, .toggle-btn:hover {
+    color: #f7c04a; /* Gold color on hover/active */
+}
+
+.toggle-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #1ca5f9; /* Blue underline */
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.toggle-btn.active::after, .toggle-btn:hover::after {
+    width: 100%;
+}
+
+.login-form {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+    color: #000; /* Black color for headings */
+}
+
+.login-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000; /* Black color for labels */
+}
+
+.login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px;
+    width: 100%;
+    background-color: #fff; /* Light input background */
+    color: #000; /* Black text color */
+}
+
+.login-btn {
+    background-color: #1ca5f9; /* Blue background for button */
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #f7c04a; /* Gold color on hover */
+}
+
+.signup-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link {
+    color: #1ca5f9; /* Light blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: #f7c04a; /* Gold color on hover */
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff5252; /* Red for error messages */
+}
